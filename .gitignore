@@ -1,0 +1,29 @@
+# Common
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+pids
+logs
+results
+tmp
+
+# IDE
+.idea
+*.iml
+.vscode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dev
+.env
+node_modules
+.eslintcache
+**/__generated__
