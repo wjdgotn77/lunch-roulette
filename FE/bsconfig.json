@@ -1,0 +1,25 @@
+{
+  "name": "lunch roulette",
+  "namespace": false,
+  "reason": { "react-jsx": 3 },
+  "bs-dependencies": ["@rescript/react"],
+  "ppx-flags": [],
+  "sources": [
+    { "dir": "pages", "subdirs": true },
+    { "dir": "styles", "subdirs": true },
+    { "dir": "src", "subdirs": true }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "warnings": {
+    "number": "-3",
+    "error": "+101+8"
+  },
+  "gentypeconfig": {
+    "language": "untyped",
+    "shims": []
+  }
+}
