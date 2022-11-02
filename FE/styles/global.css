@@ -2,6 +2,11 @@
 @tailwind components;
 
 /* @import "./_fonts.css"; */
+@import "./reset.css";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   @apply font-sans bg-white;

@@ -15,8 +15,7 @@ let default = (props: props): React.element => {
 
   let content = React.createElement(component, pageProps)
 
-    <div>
-      <h1 className="font-bold text-red-500" > {React.string("런치런치")} </h1>
-      <div className="italic font-bold text-orange-300"> content </div>
+    <div className="w-375 my-0 m-auto">
+      content
     </div>
 }

@@ -1,8 +1,27 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  content: ["./src/*.res"],
+  content: ["./src/*.res", "./src/**/*.res"],
   plugins: [],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        375: "375px",
+      },
+      colors: {
+        black: "#00000",
+        white: "#FFFFFF",
+        primary: "#C7B9FF",
+        secondary: "#0AA95E",
+        gray: "#667080",
+      },
+      fontSize: {
+        title: "48px",
+        subtitle: "24px",
+        description: "16px",
+      },
+    },
   },
 };

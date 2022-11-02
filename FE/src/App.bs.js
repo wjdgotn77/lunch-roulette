@@ -6,11 +6,9 @@ var PageComponent = {};
 
 function $$default(props) {
   var content = React.createElement(props.Component, props.pageProps);
-  return React.createElement("div", undefined, React.createElement("h1", {
-                  className: "font-bold text-red-500"
-                }, "런치런치"), React.createElement("div", {
-                  className: "italic font-bold text-orange-300"
-                }, content));
+  return React.createElement("div", {
+              className: "w-375 my-0 m-auto"
+            }, content);
 }
 
 export {
