@@ -16,6 +16,7 @@ module.exports = {
         primary: "#C7B9FF",
         secondary: "#0AA95E",
         gray: "#667080",
+        gray2: "#313136",
       },
       fontSize: {
         title: "48px",

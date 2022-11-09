@@ -5,9 +5,8 @@
   "bs-dependencies": ["@rescript/react"],
   "ppx-flags": [],
   "sources": [
-    { "dir": "pages", "subdirs": true },
-    { "dir": "styles", "subdirs": true },
-    { "dir": "src", "subdirs": true }
+    { "dir": "src", "subdirs": true },
+    { "dir": "styles", "subdirs": true }
   ],
   "package-specs": {
     "module": "es6",
