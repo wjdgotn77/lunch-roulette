@@ -10,8 +10,6 @@ var mainHeaderImg = MainHeaderImgSvg;
 
 var mainBottomBtnImg = MainBottomBtnImgPng;
 
-var $$Image$1 = {};
-
 var initialState = {
   place: "",
   category: ""
@@ -57,9 +55,10 @@ function Index$default(Props) {
   return React.createElement("div", {
               className: "bg-primary h-screen flex flex-col justify-center items-center"
             }, React.createElement($$Image, {
+                  alt: "main header img",
+                  height: 255,
                   src: mainHeaderImg,
-                  width: 276,
-                  height: 255
+                  width: 276
                 }), React.createElement("div", {
                   className: "flex justify-center"
                 }, React.createElement("form", {
@@ -100,11 +99,13 @@ function Index$default(Props) {
                             }, "양식"), React.createElement("option", {
                               value: "샐러드"
                             }, "샐러드")), React.createElement("div", undefined), React.createElement("button", {
+                          className: "flex justify-center",
                           type: "submit"
                         }, React.createElement($$Image, {
+                              alt: "main button",
+                              height: 219,
                               src: mainBottomBtnImg,
-                              width: 219,
-                              height: 219
+                              width: 219
                             })))));
 }
 
@@ -113,7 +114,6 @@ var $$default = Index$default;
 export {
   mainHeaderImg ,
   mainBottomBtnImg ,
-  $$Image$1 as $$Image,
   initialState ,
   reducer ,
   $$default ,

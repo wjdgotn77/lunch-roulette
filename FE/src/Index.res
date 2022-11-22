@@ -1,11 +1,6 @@
 @module("../public/MainHeaderImg.svg") external mainHeaderImg: string = "default"
 @module("../public/MainBottomBtnImg.png") external mainBottomBtnImg: string = "default"
 
-module Image = {
-  @module("next/image") @react.component
-  external make: (~src: string, ~width: int, ~height: int) => React.element = "default"
-}
-
 type values = {
   place: string,
   category: string,
@@ -52,7 +47,7 @@ let default = () => {
   }
 
   <div className="bg-primary h-screen flex flex-col justify-center items-center">
-    <Image src=mainHeaderImg width=276 height=255 />
+    <Next.Image src=mainHeaderImg width=276 height=255 alt="main header img" />
     <div className="flex justify-center">
       <form className="flex flex-col w-64" onSubmit=handleSubmit>
         <label className="text-base pb-1"> {"어디서 드시나요"->React.string} </label>
@@ -81,8 +76,8 @@ let default = () => {
           <option value="샐러드"> {"샐러드"->React.string} </option>
         </select>
         <div />
-        <button type_="submit">
-          <Image src=mainBottomBtnImg width=219 height=219 />
+        <button className="flex justify-center" type_="submit">
+          <Next.Image src=mainBottomBtnImg width=219 height=219 alt="main button" />
         </button>
       </form>
     </div>

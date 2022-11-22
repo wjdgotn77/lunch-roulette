@@ -6,8 +6,6 @@ import LoadingBurgerPng from "../../public/loading-burger.png";
 
 var burgerImage = LoadingBurgerPng;
 
-var $$Image$1 = {};
-
 function Loading$default(Props) {
   return React.createElement("div", {
               className: "w-100% h-screen flex flex-col items-center bg-gray2"
@@ -26,7 +24,6 @@ var $$default = Loading$default;
 
 export {
   burgerImage ,
-  $$Image$1 as $$Image,
   $$default ,
   $$default as default,
 }
