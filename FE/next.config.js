@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  pageExtensions: ["jsx", "js", "bs.js"],
+  pageExtensions: ["jsx", "js"],
   // images: {
   //   remotePatterns: [
   //     {

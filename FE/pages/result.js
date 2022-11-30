@@ -1,4 +1,4 @@
-import ResultRes from "../src/pages/Result.bs";
+import ResultRes from "../src/pages/Result.mjs";
 
 export default function Loading(props) {
   return <ResultRes {...props} />;

@@ -1,4 +1,4 @@
-import LoadingRes from "../src/pages/Loading.bs";
+import LoadingRes from "../src/pages/Loading.mjs";
 
 export default function Loading(props) {
   return <LoadingRes {...props} />;

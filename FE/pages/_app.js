@@ -1,5 +1,5 @@
 import "../styles/global.css";
-import ResApp from "../src/App.bs";
+import ResApp from "../src/App.mjs";
 
 import Head from "next/head";
 
