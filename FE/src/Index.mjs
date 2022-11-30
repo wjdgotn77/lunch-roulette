@@ -2,13 +2,69 @@
 
 import * as Curry from "rescript/lib/es6/curry.js";
 import * as React from "react";
+import * as $$Promise from "@ryyppy/rescript-promise/src/Promise.mjs";
+import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
 import $$Image from "next/image";
+import * as Caml_exceptions from "rescript/lib/es6/caml_exceptions.js";
 import MainHeaderImgSvg from "../public/MainHeaderImg.svg";
 import MainBottomBtnImgPng from "../public/MainBottomBtnImg.png";
 
 var mainHeaderImg = MainHeaderImgSvg;
 
 var mainBottomBtnImg = MainBottomBtnImgPng;
+
+var $$Response = {};
+
+function getTest(param) {
+  return $$Promise.$$catch(globalThis.fetch("https://reqres.in/api/products").then(function (res) {
+                    return res.json();
+                  }).then(function (data) {
+                  var data$1 = data.data;
+                  var ret = (data$1 == null) ? [] : data$1;
+                  return Promise.resolve({
+                              TAG: /* Ok */0,
+                              _0: ret
+                            });
+                }), (function (e) {
+                var msg;
+                if (e.RE_EXN_ID === $$Promise.JsError) {
+                  var msg$1 = e._1.message;
+                  msg = msg$1 !== undefined ? msg$1 : "";
+                } else {
+                  msg = "Unexpected error occurred";
+                }
+                return Promise.resolve({
+                            TAG: /* Error */1,
+                            _0: msg
+                          });
+              }));
+}
+
+var Test = {
+  getTest: getTest
+};
+
+var FailedRequest = /* @__PURE__ */Caml_exceptions.create("Index.FailedRequest");
+
+$$Promise.$$catch(getTest(undefined).then(function (result) {
+          var tmp;
+          if (result.TAG === /* Ok */0) {
+            tmp = Belt_Array.forEach(result._0, (function (p) {
+                    console.log("" + String(p.id) + ", " + p.name + ", " + p.year + ", " + p.color + " ");
+                  }));
+          } else {
+            console.log("Could not query products: " + result._0);
+            tmp = undefined;
+          }
+          return Promise.resolve(tmp);
+        }), (function (e) {
+        if (e.RE_EXN_ID === FailedRequest) {
+          console.log("Operation failed! " + e._1);
+        } else {
+          console.log("Unknown error");
+        }
+        return Promise.resolve(undefined);
+      }));
 
 var initialState = {
   place: "",
@@ -114,6 +170,9 @@ var $$default = Index$default;
 export {
   mainHeaderImg ,
   mainBottomBtnImg ,
+  $$Response ,
+  Test ,
+  FailedRequest ,
   initialState ,
   reducer ,
   $$default ,
