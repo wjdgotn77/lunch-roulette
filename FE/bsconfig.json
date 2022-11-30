@@ -2,7 +2,11 @@
   "name": "lunch roulette",
   "namespace": false,
   "reason": { "react-jsx": 3 },
-  "bs-dependencies": ["@rescript/react"],
+  "bs-dependencies": [
+    "@rescript/react",
+    "@glennsl/rescript-fetch",
+    "@ryyppy/rescript-promise"
+  ],
   "ppx-flags": [],
   "sources": [
     { "dir": "src", "subdirs": true },
