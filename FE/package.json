@@ -12,6 +12,7 @@
     "res:clean": "rescript clean -with-deps"
   },
   "dependencies": {
+    "@glennsl/rescript-fetch": "^0.1.4",
     "@rescript/react": "^0.10.3",
     "@tailwindcss/line-clamp": "^0.4.2",
     "next": "13.0.0",
